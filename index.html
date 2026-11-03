@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b33">
+  <meta name="description" content="Inicio de sesión de demostración para aprender HTML, CSS y JavaScript.">
+  <title>Acceso seguro | Aula Digital</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span><span>Aula<span class="brand-accent">Digital</span></span></div>
+      <div class="showcase-content">
+        <p class="eyebrow">PLATAFORMA ACADÉMICA</p>
+        <h1 id="showcase-title">Tu espacio para<br><span>aprender y crecer.</span></h1>
+        <p>Una experiencia de acceso sencilla, moderna y diseñada para tu aprendizaje.</p>
+        <div class="feature-list" aria-label="Características de la plataforma">
+          <div class="feature"><span class="feature-icon" aria-hidden="true">✓</span><span>Interfaz clara e intuitiva</span></div>
+          <div class="feature"><span class="feature-icon" aria-hidden="true">✓</span><span>Diseño adaptable a tus dispositivos</span></div>
+          <div class="feature"><span class="feature-icon" aria-hidden="true">✓</span><span>Práctica educativa de desarrollo web</span></div>
+        </div>
+      </div>
+      <p class="showcase-foot">HTML5 · CSS3 · JavaScript</p>
+    </section>
+
+    <section class="login-area" aria-labelledby="login-title">
+      <div class="login-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg>
+        </div>
+        <p class="mini-label">BIENVENIDO DE NUEVO</p>
+        <h2 id="login-title">Iniciar sesión</h2>
+        <p class="subtitle">Ingresa tus credenciales para continuar.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <div class="input-wrap">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <input id="email" name="email" type="email" autocomplete="username" inputmode="email" placeholder="nombre@ejemplo.com" required aria-describedby="email-error" aria-invalid="false">
+            </div>
+            <p id="email-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <div class="field-header"><label for="password">Contraseña</label></div>
+            <div class="input-wrap">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Mínimo 8 caracteres" required minlength="8" aria-describedby="password-error" aria-invalid="false">
+              <button type="button" id="toggle-password" class="toggle-password" aria-label="Mostrar contraseña" aria-pressed="false" title="Mostrar contraseña">
+                <svg id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <p id="password-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-extras">
+            <label class="remember"><input type="checkbox" id="remember-email"><span>Recordar mi correo</span></label>
+            <a href="#ayuda" id="forgot-password">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button class="submit-button" type="submit">Iniciar sesión <span aria-hidden="true">→</span></button>
+          <div id="form-message" class="form-message" role="status" aria-live="polite" aria-atomic="true"></div>
+        </form>
+
+        <div class="demo-box">
+          <div class="demo-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><strong>Credenciales de prueba</strong></div>
+          <p><b>Correo:</b> demo@ejemplo.com</p>
+          <p><b>Contraseña:</b> Demo1234!</p>
+          <button class="fill-demo" type="button" id="fill-demo">Completar datos de prueba</button>
+        </div>
+        <p class="disclaimer">Demostración académica: la validación en el navegador no reemplaza una autenticación segura en el servidor.</p>
+      </div>
+      <p class="footer">© 2026 Aula Digital · Proyecto didáctico universitario</p>
+    </section>
+  </main>
+</body>
+</html>
